@@ -132,6 +132,7 @@
         (reduce-kv
          (fn [acc column-name value]
            (update acc column-name conj value))
+         acc
          row)))
     (apply hash-map (interleave header (repeat [])))
     rows)))
